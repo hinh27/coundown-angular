@@ -1,0 +1,11 @@
+
+<h2>Countdown Timer</h2>
+<input *ngIf="isStart" type="number" [value]="second" (change)="onChange($event.target.value)">
+<div class="group-actions">
+  <button (click)="start()">Start</button>
+  <button (click)="stop()">Stop</button>
+  <button (click)="reset()">Reset</button>
+</div>
+<div class="timer">
+  <span class="timer-text">{{ remainingTime }}</span>
+</div>
